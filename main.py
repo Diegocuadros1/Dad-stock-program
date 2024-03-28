@@ -91,7 +91,7 @@ def alert(low, high, date_range):
 
   for i in range(len(date_range) - 1):
 
-    print(date_range[i][2])
+    print(date_range[i][2], "HIGH: ", high_price, "LOW: ", low_price)
 
     days_passed = convert_to_date(date_range[i][1]) - start_date
 
@@ -100,25 +100,23 @@ def alert(low, high, date_range):
       print("DAYS PASSED: ", days_passed.days)
       print("Start Date: ", start_date)
       print("Curr High: ", date_range[i][3])
-      print("Number of days to alert: ", days_passed)
 
 
       #resetting start date & high and low price
       start_date = convert_to_date(date_range[i][1])
-      high_price = high * float(date_range[i][2])
-      low_price = low * float(date_range[i][2])
+      high_price = high * float(date_range[i + 1][2])
+      low_price = low * float(date_range[i + 1][2])
 
     if float(date_range[i][4]) <= low_price:
       print("Low ALERT REACHED: ", date_range[i][0], date_range[i][1])
       print("DAYS PASSED: ", days_passed.days)
       print("Start Date: ", start_date)
       print("Curr Low: ", date_range[i][4])
-      print("Number of days to alert: ", days_passed)
 
       #resetting start date & high and low price
       start_date = convert_to_date(date_range[i][1])
-      high_price = high * float(date_range[i][2])
-      low_price = low * float(date_range[i][2])
+      high_price = high * float(date_range[i + 1][2])
+      low_price = low * float(date_range[i + 1][2])
 
     if days_passed.days >= 30:
       print("30 Days Reached: ", date_range[i][0], date_range[i][1])
@@ -127,8 +125,8 @@ def alert(low, high, date_range):
 
 
       start_date = convert_to_date(date_range[i][1])
-      high_price = high * float(date_range[i][2])
-      low_price = low * float(date_range[i][2])
+      high_price = high * float(date_range[i + 1][2])
+      low_price = low * float(date_range[i + 1][2])
 
 
 

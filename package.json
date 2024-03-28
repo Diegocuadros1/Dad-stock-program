@@ -1,0 +1,27 @@
+{
+  "name": "dad-stock-project",
+  "version": "1.0.0",
+  "description": "Stock Alert",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegocuadros1/Dad-stock-program.git"
+  },
+  "author": "Diego Cuadros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diegocuadros1/Dad-stock-program/issues"
+  },
+  "homepage": "https://github.com/Diegocuadros1/Dad-stock-program#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "moment": "^2.30.1",
+    "path": "^0.12.7",
+    "prompt-sync": "^4.2.0",
+    "readline": "^1.3.0"
+  }
+}
